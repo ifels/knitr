@@ -112,6 +112,7 @@ Collate:
     'parser.R'
     'pattern.R'
     'rocco.R'
+    'shiny.R'
     'spin.R'
     'table.R'
     'template.R'
