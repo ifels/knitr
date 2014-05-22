@@ -88,10 +88,10 @@ render_jekyll = function(highlight = c('pygments', 'prettify', 'none'), extra = 
   if (hi == 'none') return()
   switch(hi, pygments = {
     hook.r = function(x, options) {
-      str_c('\n\n{% highlight ', tolower(options$engine), if (extra != '') ' ', extra, ' %}\n',
+      str_c('\n\n{% highlight ', tolower(options$engine), if (extra != '') ' ', extra, ' tabsize=4 %}\n',
             x, '\n{% endhighlight %}\n\n')
     }
-    hook.t = function(x, options) str_c('\n\n{% highlight text %}\n', x, '{% endhighlight %}\n\n')
+    hook.t = function(x, options) str_c('\n\n{% highlight text tabsize=4 %}\n', x, '{% endhighlight %}\n\n')
   }, prettify = {
     hook.r = function(x, options) {
       str_c('\n\n<pre><code class="prettyprint ', extra, '">',
